@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProductController;
+// use App\Http\Controllers\CategoryController;
+// use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,21 +16,22 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-//Rutas de categorias
-Route::get('all-categories',[CategoryController::class, 'index']);
-Route::get('show-category/{id}',[CategoryController::class, 'show']);
-Route::post('new-category',[CategoryController::class, 'store']);
-Route::put('modify-category/{id}',[CategoryController::class, 'update']);
-Route::delete('delete-category/{id}',[CategoryController::class, 'destroy']);
+// //Rutas de categorias
+// Route::get('all-categories',[CategoryController::class, 'index']);
+// Route::get('show-category/{id}',[CategoryController::class, 'show']);
+// Route::post('new-category',[CategoryController::class, 'store']);
+// Route::put('modify-category/{id}',[CategoryController::class, 'update']);
+// Route::delete('delete-category/{id}',[CategoryController::class, 'destroy']);
 
-//Rutas de productos
-Route::get('all-products',[ProductController::class, 'index']);
-Route::get('show-product/{id}',[ProductController::class, 'show']);
-Route::post('new-product',[ProductController::class, 'store']);
-Route::put('modify-product/{id}',[ProductController::class, 'update']);
-Route::delete('delete-product/{id}',[ProductController::class, 'destroy']);
+// //Rutas de productos
+// Route::get('all-products',[ProductController::class, 'index']);
+// Route::get('show-product/{id}',[ProductController::class, 'show']);
+// Route::post('new-product',[ProductController::class, 'store']);
+// Route::post('modify-product',[ProductController::class, 'update']);
+// Route::delete('delete-product/{id}',[ProductController::class, 'destroy']);
 
+Route::get('ejemplo',[SubjectController::class, 'index']);
